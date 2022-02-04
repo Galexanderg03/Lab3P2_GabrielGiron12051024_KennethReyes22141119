@@ -5,10 +5,44 @@
  */
 package lab3p2_gabrielgiron;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author Galex
  */
-public class Alumno {
+public class Alumno extends Personas{
+    
+    private long IDEstudiante;
+    private ArrayList<Clase> Clases = new ArrayList();
+    
+    public Alumno(long IDEstudiante, String Nombre, long ID, Date FechaNacimiento) {
+        super(Nombre, ID, FechaNacimiento);
+        this.IDEstudiante = IDEstudiante;
+    }
+
+    public long getIDEstudiante() {
+        return IDEstudiante;
+    }
+
+    public void setIDEstudiante(long IDEstudiante) {
+        this.IDEstudiante = IDEstudiante;
+    }
+
+    public ArrayList<Clase> getClases() {
+        return Clases;
+    }
+
+    public void setClases(ArrayList<Clase> Clases) {
+        this.Clases = Clases;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "IDEstudiante=" + IDEstudiante + ", Clases=" + Clases + '}';
+    }
+    
+    
     
 }

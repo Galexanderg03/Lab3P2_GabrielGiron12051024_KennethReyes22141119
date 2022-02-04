@@ -5,10 +5,43 @@
  */
 package lab3p2_gabrielgiron;
 
+import java.util.Date;
+
 /**
  *
  * @author Galex
  */
-public class Transportista {
+public class Transportista extends Personas{
+    
+    private int AñosEXP;
+    private String Apodo;
+
+    public Transportista(int AñosEXP, String Apodo, String Nombre, long ID, Date FechaNacimiento) {
+        super(Nombre, ID, FechaNacimiento);
+        this.AñosEXP = AñosEXP;
+        this.Apodo = Apodo;
+    }
+
+    public int getAñosEXP() {
+        return AñosEXP;
+    }
+
+    public void setAñosEXP(int AñosEXP) {
+        this.AñosEXP = AñosEXP;
+    }
+
+    public String getApodo() {
+        return Apodo;
+    }
+
+    public void setApodo(String Apodo) {
+        this.Apodo = Apodo;
+    }
+
+    @Override
+    public String toString() {
+        return "Transportista{" + "AñosEXP=" + AñosEXP + ", Apodo=" + Apodo + '}';
+    }
+    
     
 }
